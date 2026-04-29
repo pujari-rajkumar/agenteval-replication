@@ -1,0 +1,52 @@
+{
+  "natural_dialogue_quality": {
+    "description": "Evaluates how well the response mimics a human-like conversational style, emphasizing warmth, engagement, and personality.",
+    "accepted_values": {
+      "1": "Very poor: Lacks warmth and engagement; overly formal.",
+      "2": "Poor: Slightly engaging but still feels robotic.",
+      "3": "Average: Some conversational elements; feels somewhat human.",
+      "4": "Good: Engaging and warm; shows personality but not overly so.",
+      "5": "Excellent: Highly engaging, warm, and personable; feels very natural."
+    }
+  },
+  "coherence_and_relevance": {
+    "description": "Assesses how coherent and relevant the response is to the user's prompt, including logical flow and on-topic engagement.",
+    "accepted_values": {
+      "1": "Very poor: Response is incoherent and off-topic.",
+      "2": "Poor: Response is somewhat coherent but mostly off-topic.",
+      "3": "Average: Response is coherent but lacks depth in relevance.",
+      "4": "Good: Response is coherent and mostly relevant to the prompt.",
+      "5": "Excellent: Response is highly coherent and directly relevant to the user's prompt."
+    }
+  },
+  "listening_and_turn_taking": {
+    "description": "Measures the degree to which the response demonstrates active listening and appropriate turn-taking in the conversation.",
+    "accepted_values": {
+      "1": "Very poor: No indication of listening; does not engage with the user's prompt.",
+      "2": "Poor: Minimal listening; does not acknowledge user's input.",
+      "3": "Average: Some listening; engages but lacks follow-up questions or cues.",
+      "4": "Good: Shows good listening; includes follow-up questions or comments.",
+      "5": "Excellent: Actively listens and engages with multiple turn-taking cues."
+    }
+  },
+  "boilerplate_and_corporate_phrasing": {
+    "description": "Evaluates the extent to which the response avoids unnecessary boilerplate language and corporate-style phrasing.",
+    "accepted_values": {
+      "1": "Very poor: Heavy use of boilerplate language and corporate tone.",
+      "2": "Poor: Some boilerplate language present; feels quite formal.",
+      "3": "Average: Limited boilerplate language; somewhat formal.",
+      "4": "Good: Minimal boilerplate; mostly conversational tone.",
+      "5": "Excellent: No boilerplate language; entirely conversational."
+    }
+  },
+  "accuracy_and_helpfulness": {
+    "description": "Assesses the accuracy of information provided and the helpfulness of the response in addressing the user's needs.",
+    "accepted_values": {
+      "1": "Very poor: Inaccurate information; not helpful.",
+      "2": "Poor: Some accuracy; response is not very helpful.",
+      "3": "Average: Generally accurate; partially helpful.",
+      "4": "Good: Accurate information; helpful to the user.",
+      "5": "Excellent: Highly accurate and very helpful; adds great value."
+    }
+  }
+}

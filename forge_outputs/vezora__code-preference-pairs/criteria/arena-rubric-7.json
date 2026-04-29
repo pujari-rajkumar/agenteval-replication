@@ -1,0 +1,70 @@
+{
+  "functional_correctness": {
+    "description": "Measures whether the solution meets the specified requirements and behaves correctly for all expected inputs.",
+    "accepted_values": [
+      "0: Incorrect",
+      "1: Partially Correct",
+      "2: Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Evaluates how well the solution deals with edge cases, including unusual, extreme, or unexpected inputs.",
+    "accepted_values": [
+      "0: Poor",
+      "1: Fair",
+      "2: Good",
+      "3: Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "Assesses the time and space complexity of the solution, ensuring it performs well within given constraints.",
+    "accepted_values": [
+      "0: Poor (O(N^2) or worse)",
+      "1: Fair (O(N log N))",
+      "2: Good (O(N))",
+      "3: Excellent (O(1))"
+    ]
+  },
+  "robustness": {
+    "description": "Measures the ability of the solution to handle errors gracefully and maintain functionality under adverse conditions.",
+    "accepted_values": [
+      "0: Not Robust",
+      "1: Somewhat Robust",
+      "2: Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Evaluates the appropriate use of APIs and libraries, ensuring they are leveraged correctly and efficiently.",
+    "accepted_values": [
+      "0: Incorrect Usage",
+      "1: Limited Usage",
+      "2: Correct Usage"
+    ]
+  },
+  "readability": {
+    "description": "Assesses how easy the solution is to read and understand, including code structure, comments, and naming conventions.",
+    "accepted_values": [
+      "0: Poor",
+      "1: Fair",
+      "2: Good",
+      "3: Excellent"
+    ]
+  },
+  "maintainability": {
+    "description": "Evaluates how easy it is to modify and extend the solution in the future, considering code organization and modularity.",
+    "accepted_values": [
+      "0: Difficult",
+      "1: Moderate",
+      "2: Easy"
+    ]
+  },
+  "error_security_handling": {
+    "description": "Measures how well the solution safeguards against potential security vulnerabilities and errors that could lead to failures.",
+    "accepted_values": [
+      "0: Poor",
+      "1: Fair",
+      "2: Good",
+      "3: Excellent"
+    ]
+  }
+}

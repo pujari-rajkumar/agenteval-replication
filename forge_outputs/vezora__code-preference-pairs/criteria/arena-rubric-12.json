@@ -1,0 +1,66 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the code meets the specified requirements and produces the correct output for the given inputs.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses the solution's ability to handle edge cases that may not be immediately apparent but are important for robustness.",
+    "accepted_values": [
+      "0 - None",
+      "1 - Some",
+      "2 - Comprehensive"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time and space complexity of the solution, particularly under large input sizes as specified in the task.",
+    "accepted_values": [
+      "0 - Poor (not meeting complexity requirements)",
+      "1 - Average (meets complexity but not optimal)",
+      "2 - Good (optimal performance)"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates the code's resilience against invalid inputs and its ability to handle unexpected situations gracefully.",
+    "accepted_values": [
+      "0 - Not Robust",
+      "1 - Somewhat Robust",
+      "2 - Fully Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses whether the solution correctly uses appropriate APIs and libraries, if applicable, and adheres to best practices.",
+    "accepted_values": [
+      "0 - Poor use",
+      "1 - Acceptable use",
+      "2 - Excellent use"
+    ]
+  },
+  "readability": {
+    "description": "Evaluates the clarity and maintainability of the code, including naming conventions and code structure.",
+    "accepted_values": [
+      "0 - Difficult to read",
+      "1 - Somewhat readable",
+      "2 - Very readable"
+    ]
+  },
+  "error_handling_security": {
+    "description": "Assesses how well the code handles errors and potential security vulnerabilities, particularly 'footgun' scenarios.",
+    "accepted_values": [
+      "0 - Poor handling",
+      "1 - Basic handling",
+      "2 - Excellent handling"
+    ]
+  },
+  "maintainability": {
+    "description": "Evaluates how easy it would be to modify or extend the code in the future, including documentation and modular design.",
+    "accepted_values": [
+      "0 - Not maintainable",
+      "1 - Somewhat maintainable",
+      "2 - Highly maintainable"
+    ]
+  }
+}

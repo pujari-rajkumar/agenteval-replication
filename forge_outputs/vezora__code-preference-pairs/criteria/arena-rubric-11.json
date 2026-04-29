@@ -1,0 +1,66 @@
+{
+  "functional_correctness": {
+    "description": "The solution correctly implements the functionality as per the user's requirements, producing expected outputs for given inputs.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "bug_sensitivity": {
+    "description": "The extent to which the code handles subtle bugs or edge cases that may arise during execution.",
+    "accepted_values": [
+      "0 - High Sensitivity",
+      "1 - Medium Sensitivity",
+      "2 - Low Sensitivity"
+    ]
+  },
+  "engineering_quality": {
+    "description": "The overall quality of the code including structure, adherence to best practices, and use of efficient algorithms.",
+    "accepted_values": [
+      "0 - Poor Quality",
+      "1 - Average Quality",
+      "2 - High Quality"
+    ]
+  },
+  "efficiency": {
+    "description": "The time and space complexity of the solution, particularly whether it meets the required complexities.",
+    "accepted_values": [
+      "0 - Does Not Meet Requirements",
+      "1 - Partially Meets Requirements",
+      "2 - Fully Meets Requirements"
+    ]
+  },
+  "robustness": {
+    "description": "The ability of the code to handle unexpected inputs or edge cases without failing.",
+    "accepted_values": [
+      "0 - Very Fragile",
+      "1 - Somewhat Robust",
+      "2 - Very Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "The correct and optimal use of APIs or libraries, where applicable, without unnecessary complexity.",
+    "accepted_values": [
+      "0 - Poor Usage",
+      "1 - Adequate Usage",
+      "2 - Excellent Usage"
+    ]
+  },
+  "readability": {
+    "description": "The clarity and maintainability of the code, including naming conventions and comments.",
+    "accepted_values": [
+      "0 - Difficult to Read",
+      "1 - Moderately Readable",
+      "2 - Very Readable"
+    ]
+  },
+  "error_handling": {
+    "description": "The implementation of error handling mechanisms to manage exceptions and ensure security against common vulnerabilities.",
+    "accepted_values": [
+      "0 - No Error Handling",
+      "1 - Basic Error Handling",
+      "2 - Comprehensive Error Handling"
+    ]
+  }
+}

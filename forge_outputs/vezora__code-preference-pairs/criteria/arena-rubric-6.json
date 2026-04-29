@@ -1,0 +1,74 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the code produces the correct output according to the specified requirements and handles edge cases effectively.",
+    "accepted_values": {
+      "0": "Incorrect output",
+      "1": "Partially correct output",
+      "2": "Correct output for basic cases",
+      "3": "Correct output for all cases including edge cases"
+    }
+  },
+  "bug_sensitivity": {
+    "description": "Assesses the code's ability to avoid introducing bugs, especially those that stem from subtle errors in logic or handling of edge cases.",
+    "accepted_values": {
+      "0": "Multiple bugs present",
+      "1": "Some bugs present, but major functionality intact",
+      "2": "No significant bugs identified but minor issues exist",
+      "3": "No bugs present"
+    }
+  },
+  "engineering_quality": {
+    "description": "Measures the overall quality of the code, including clarity, structure, and adherence to best practices.",
+    "accepted_values": {
+      "0": "Poor quality, difficult to read and maintain",
+      "1": "Fair quality, some readability issues",
+      "2": "Good quality, generally readable and maintainable",
+      "3": "Excellent quality, very clear and maintainable"
+    }
+  },
+  "efficiency": {
+    "description": "Evaluates the performance of the code, particularly its time and space complexity relative to the task requirements.",
+    "accepted_values": {
+      "0": "Inefficient, exceeds complexity requirements",
+      "1": "Acceptable efficiency, meets basic requirements",
+      "2": "Good efficiency, performs well within constraints",
+      "3": "Optimal efficiency, highly efficient implementation"
+    }
+  },
+  "robustness": {
+    "description": "Assesses the code's ability to handle unexpected inputs or situations without failing.",
+    "accepted_values": {
+      "0": "Crashes or fails with unexpected inputs",
+      "1": "Handles some unexpected inputs, but not all",
+      "2": "Handles most unexpected inputs gracefully",
+      "3": "Robust, handles all unexpected inputs without issues"
+    }
+  },
+  "api_library_usage": {
+    "description": "Evaluates how effectively and appropriately APIs or libraries are used in the implementation.",
+    "accepted_values": {
+      "0": "Misuses APIs/libraries or does not utilize relevant ones",
+      "1": "Uses APIs/libraries, but with some inefficiencies",
+      "2": "Appropriately uses APIs/libraries with minor inefficiencies",
+      "3": "Optimally uses APIs/libraries with a thorough understanding"
+    }
+  },
+  "readability_maintainability": {
+    "description": "Measures how easy it is to read, understand, and maintain the code over time.",
+    "accepted_values": {
+      "0": "Difficult to read and understand, high maintenance burden",
+      "1": "Somewhat readable, but has maintainability issues",
+      "2": "Readable and maintainable, with minor issues",
+      "3": "Very readable, well-structured, and easy to maintain"
+    }
+  },
+  "error_handling_security": {
+    "description": "Assesses the effectiveness of error handling and the code's resilience against common security vulnerabilities.",
+    "accepted_values": {
+      "0": "No error handling or security measures implemented",
+      "1": "Basic error handling present, some security flaws",
+      "2": "Good error handling with minimal security issues",
+      "3": "Excellent error handling and security measures in place"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "natural_dialogue_warmth": {
+    "description": "The degree to which the response feels warm, inviting, and engaging to the user, making the conversation enjoyable.",
+    "accepted_values": {
+      "1": "Very low warmth: response is cold and uninviting.",
+      "2": "Low warmth: response has minimal warmth, lacks engagement.",
+      "3": "Moderate warmth: response is somewhat friendly but lacks depth.",
+      "4": "High warmth: response is friendly, inviting, and engaging.",
+      "5": "Very high warmth: response is exceptionally warm, engaging, and personable."
+    }
+  },
+  "engagement": {
+    "description": "The extent to which the response encourages further dialogue and interaction from the user.",
+    "accepted_values": {
+      "1": "Very low engagement: response does not encourage further conversation.",
+      "2": "Low engagement: response provides limited prompts for user interaction.",
+      "3": "Moderate engagement: response encourages some further dialogue.",
+      "4": "High engagement: response actively invites and stimulates user interaction.",
+      "5": "Very high engagement: response is highly interactive and encourages ongoing conversation."
+    }
+  },
+  "personality_use": {
+    "description": "The appropriateness and effectiveness of personality traits or emojis incorporated into the response.",
+    "accepted_values": {
+      "1": "Very inappropriate: no personality or emoji use; feels robotic.",
+      "2": "Inappropriate: minimal personality; emojis used poorly or not at all.",
+      "3": "Somewhat appropriate: personality traits present, emojis used sparingly.",
+      "4": "Appropriate: good use of personality; emojis enhance the conversation.",
+      "5": "Very appropriate: strong personality; emojis are used effectively and enhance engagement."
+    }
+  },
+  "coherence": {
+    "description": "The logical flow and clarity of the response, ensuring it is easy to understand and follow.",
+    "accepted_values": {
+      "1": "Very incoherent: response is confusing and poorly structured.",
+      "2": "Incoherent: response lacks clarity and logical structure.",
+      "3": "Somewhat coherent: response is understandable but may have minor issues.",
+      "4": "Coherent: response is clear and logically structured.",
+      "5": "Very coherent: response is exceptionally clear, well-structured, and easy to follow."
+    }
+  },
+  "listening_turn_taking": {
+    "description": "The ability of the response to demonstrate understanding and appropriate turn-taking in conversation, indicating active listening.",
+    "accepted_values": {
+      "1": "Very poor: response does not acknowledge user input at all.",
+      "2": "Poor: response shows minimal acknowledgment of user input.",
+      "3": "Moderate: response acknowledges user input but lacks depth in engagement.",
+      "4": "Good: response effectively acknowledges and builds on user input.",
+      "5": "Excellent: response demonstrates deep understanding and engages in strong turn-taking."
+    }
+  },
+  "boilerplate_removal": {
+    "description": "The extent to which the response avoids unnecessary formalities, disclaimers, or stiff phrases that detract from a conversational tone.",
+    "accepted_values": {
+      "1": "Very high boilerplate: response is overly formal and filled with disclaimers.",
+      "2": "High boilerplate: response contains many formal phrases and disclaimers.",
+      "3": "Moderate boilerplate: response includes some boilerplate but also has conversational elements.",
+      "4": "Low boilerplate: response is mostly free of formalities and is quite conversational.",
+      "5": "Very low boilerplate: response is entirely conversational, with no unnecessary formalities."
+    }
+  }
+}

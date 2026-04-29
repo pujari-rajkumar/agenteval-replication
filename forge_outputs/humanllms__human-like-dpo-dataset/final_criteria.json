@@ -1,0 +1,211 @@
+{
+  "human_like_engagement": {
+    "description": "The degree to which the response demonstrates warmth, friendliness, and engagement with the user.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "coherence_and_relevance": {
+    "description": "The clarity and relevance of the response in relation to the user's prompt, ensuring it stays on topic.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "natural_dialogue_flow": {
+    "description": "The extent to which the response mimics natural conversational patterns including turn-taking and listening.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "personality_expression": {
+    "description": "The ability of the response to convey an appropriate personality, including the use of emojis and informal language where suitable.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "avoiding_boilerplate_language": {
+    "description": "The degree to which the response avoids unnecessary formalities, disclaimers, or corporate phrasing.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "helpfulness_and_accuracy": {
+    "description": "The extent to which the response provides accurate information while remaining helpful and relevant.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "engagement_quality": {
+    "description": "Measures how engaging and warm the response is, including personality and relatability.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "moderate",
+      "high",
+      "very high"
+    ]
+  },
+  "listening_and_turn_taking": {
+    "description": "Measures the degree to which the response demonstrates active listening and appropriate turn-taking in the conversation.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "moderate",
+      "high",
+      "very high"
+    ]
+  },
+  "boilerplate_and_corporate_phrasing": {
+    "description": "Evaluates the extent to which the response avoids unnecessary boilerplate language and corporate-style phrasing.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "natural_dialogue_quality": {
+    "description": "Evaluates how well the response mimics a human-like conversational style, emphasizing warmth, engagement, and personality.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "creativity": {
+    "description": "Measures the originality and inventiveness of the response, particularly in how it relates to the user's prompt.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "warmth": {
+    "description": "The presence of friendly, comforting elements in the response, such as humor or empathy.",
+    "accepted_values": [
+      "cold",
+      "neutral",
+      "warm",
+      "very warm"
+    ]
+  },
+  "avoiding_corporate_language": {
+    "description": "The extent to which the response avoids rigid corporate language and boilerplate phrases.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "listening": {
+    "description": "The effectiveness of the response in demonstrating understanding and acknowledging the user's input.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "responsiveness": {
+    "description": "Evaluates how well the response addresses the user's prompt and follows up with relevant questions or comments.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "natural_dialogue": {
+    "description": "The quality of the response in terms of coherence, turn-taking, and fluidity, making the conversation feel natural.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "safety_and_accuracy": {
+    "description": "Assesses whether the response maintains factual correctness and follows safety guidelines while engaging in conversation.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "listening_skills": {
+    "description": "Assesses the ability of the response to reflect an understanding of the user's prompt and respond appropriately.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "moderate",
+      "high",
+      "very high"
+    ]
+  },
+  "turn_taking": {
+    "description": "Effectiveness of acknowledging user input and prompting for further interaction.",
+    "accepted_values": [
+      "very low",
+      "low",
+      "medium",
+      "high",
+      "very high"
+    ]
+  },
+  "avoidance_of_boilerplate": {
+    "description": "The extent to which unnecessary formalities or clich\u00e9s are eliminated from the response.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  "personality_use": {
+    "description": "The appropriateness and effectiveness of personality traits or emojis incorporated into the response.",
+    "accepted_values": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  }
+}

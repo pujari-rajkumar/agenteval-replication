@@ -1,0 +1,82 @@
+{
+  "functional_correctness": {
+    "description": "The solution meets all the specified functional requirements without errors.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "bug_sensitivity": {
+    "description": "The extent to which the solution can handle edge cases or subtle bugs introduced during modification.",
+    "accepted_values": [
+      "0 - High Sensitivity",
+      "1 - Medium Sensitivity",
+      "2 - Low Sensitivity"
+    ]
+  },
+  "engineering_quality": {
+    "description": "Overall quality of the code in terms of best practices, efficiency, and maintainability.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Fair",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "The solution's performance in terms of time and space complexity, especially for large inputs.",
+    "accepted_values": [
+      "0 - Very Inefficient",
+      "1 - Inefficient",
+      "2 - Efficient",
+      "3 - Very Efficient"
+    ]
+  },
+  "robustness": {
+    "description": "The ability of the solution to handle unexpected inputs or errors gracefully.",
+    "accepted_values": [
+      "0 - Not Robust",
+      "1 - Somewhat Robust",
+      "2 - Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Appropriate use of APIs and libraries; whether the solution adheres to standard practices.",
+    "accepted_values": [
+      "0 - Poor Usage",
+      "1 - Fair Usage",
+      "2 - Good Usage",
+      "3 - Exemplary Usage"
+    ]
+  },
+  "readability": {
+    "description": "Clarity and comprehensibility of the code, including naming conventions and comments.",
+    "accepted_values": [
+      "0 - Very Poor",
+      "1 - Poor",
+      "2 - Acceptable",
+      "3 - Good",
+      "4 - Excellent"
+    ]
+  },
+  "maintainability": {
+    "description": "How easy it is to modify the code in the future, considering structure and documentation.",
+    "accepted_values": [
+      "0 - Very Difficult",
+      "1 - Difficult",
+      "2 - Moderate",
+      "3 - Easy",
+      "4 - Very Easy"
+    ]
+  },
+  "error_handling": {
+    "description": "The effectiveness of error handling mechanisms in the solution to prevent crashes.",
+    "accepted_values": [
+      "0 - Poor Handling",
+      "1 - Fair Handling",
+      "2 - Good Handling",
+      "3 - Excellent Handling"
+    ]
+  }
+}

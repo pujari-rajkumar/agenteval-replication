@@ -1,0 +1,52 @@
+{
+  "natural_dialogue": {
+    "description": "Assesses the warmth and engagement level of the response, including the use of appropriate personality and emojis.",
+    "accepted_values": {
+      "1": "Very formal, lacks warmth and engagement.",
+      "2": "Somewhat formal, minimal warmth.",
+      "3": "Balanced tone, moderately engaging.",
+      "4": "Conversational, warm and engaging.",
+      "5": "Highly conversational, very warm and engaging with expressive use of personality/emojis."
+    }
+  },
+  "coherence": {
+    "description": "Evaluates the logical flow and clarity of the response.",
+    "accepted_values": {
+      "1": "Completely incoherent, difficult to follow.",
+      "2": "Somewhat incoherent, unclear at times.",
+      "3": "Generally coherent, minor inconsistencies.",
+      "4": "Mostly coherent, clear and easy to follow.",
+      "5": "Fully coherent, very clear and logical."
+    }
+  },
+  "listening_and_turn_taking": {
+    "description": "Measures how well the response acknowledges the user's input and promotes further dialogue.",
+    "accepted_values": {
+      "1": "No acknowledgment of user input.",
+      "2": "Minimal acknowledgment, does not encourage further dialogue.",
+      "3": "Some acknowledgment, limited invitation for follow-up.",
+      "4": "Good acknowledgment, encourages further interaction.",
+      "5": "Excellent acknowledgment, actively fosters engaging dialogue."
+    }
+  },
+  "avoiding_boilerplate": {
+    "description": "Assesses the extent to which the response avoids unnecessary disclaimers and stiff corporate phrasing.",
+    "accepted_values": {
+      "1": "Heavy use of boilerplate language.",
+      "2": "Some boilerplate language, but not overly much.",
+      "3": "Moderate use of boilerplate language.",
+      "4": "Minimal use of boilerplate language.",
+      "5": "No boilerplate language, completely natural."
+    }
+  },
+  "accuracy_and_helpfulness": {
+    "description": "Evaluates the factual accuracy and practicality of the information provided in the response.",
+    "accepted_values": {
+      "1": "Inaccurate or misleading information.",
+      "2": "Some accurate information, but lacks helpfulness.",
+      "3": "Generally accurate, provides some helpfulness.",
+      "4": "Mostly accurate and helpful.",
+      "5": "Completely accurate and highly helpful."
+    }
+  }
+}

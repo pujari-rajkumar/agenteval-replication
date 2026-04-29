@@ -1,0 +1,74 @@
+{
+  "correctness": {
+    "description": "The extent to which the assistant's response is factually accurate and aligns with known information.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially correct",
+      "2 - Mostly correct",
+      "3 - Completely correct"
+    ]
+  },
+  "relevance": {
+    "description": "The degree to which the assistant's response is pertinent to the user's query and context.",
+    "accepted_values": [
+      "0 - Not relevant",
+      "1 - Somewhat relevant",
+      "2 - Mostly relevant",
+      "3 - Highly relevant"
+    ]
+  },
+  "helpfulness": {
+    "description": "The effectiveness of the assistant's response in aiding the user to achieve their goals or solve their problem.",
+    "accepted_values": [
+      "0 - Not helpful",
+      "1 - Slightly helpful",
+      "2 - Moderately helpful",
+      "3 - Very helpful"
+    ]
+  },
+  "clarity": {
+    "description": "How clearly the assistant communicates its ideas, including structure and language used.",
+    "accepted_values": [
+      "0 - Very unclear",
+      "1 - Somewhat clear",
+      "2 - Mostly clear",
+      "3 - Very clear"
+    ]
+  },
+  "completeness": {
+    "description": "The extent to which the assistant's response addresses all aspects of the user's question or query.",
+    "accepted_values": [
+      "0 - Incomplete",
+      "1 - Partially complete",
+      "2 - Mostly complete",
+      "3 - Fully complete"
+    ]
+  },
+  "safety": {
+    "description": "Consideration of how safe the content is, including the absence of harmful advice or information.",
+    "accepted_values": [
+      "0 - Not safe",
+      "1 - Somewhat safe",
+      "2 - Mostly safe",
+      "3 - Completely safe"
+    ]
+  },
+  "instruction_following": {
+    "description": "The extent to which the assistant adheres to specific instructions or prompts given by the user.",
+    "accepted_values": [
+      "0 - Not followed",
+      "1 - Partially followed",
+      "2 - Mostly followed",
+      "3 - Fully followed"
+    ]
+  },
+  "reasoning_quality": {
+    "description": "The level of logical reasoning and critical thinking demonstrated in the assistant's response.",
+    "accepted_values": [
+      "0 - Poor reasoning",
+      "1 - Fair reasoning",
+      "2 - Good reasoning",
+      "3 - Excellent reasoning"
+    ]
+  }
+}

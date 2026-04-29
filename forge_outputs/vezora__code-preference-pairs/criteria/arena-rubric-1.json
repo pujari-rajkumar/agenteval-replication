@@ -1,0 +1,66 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates if the code meets the functional requirements specified in the task prompt.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "bug_sensitivity": {
+    "description": "Assesses the code's ability to handle cases with subtle bugs or edge cases that could lead to incorrect results.",
+    "accepted_values": [
+      "0 - High Sensitivity",
+      "1 - Medium Sensitivity",
+      "2 - Low Sensitivity"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time and space complexity of the solution in relation to the task's requirements.",
+    "accepted_values": [
+      "0 - O(N) or better",
+      "1 - O(N^2)",
+      "2 - O(N^3) or worse"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates how well the code handles unexpected inputs or edge cases.",
+    "accepted_values": [
+      "0 - Very Robust",
+      "1 - Somewhat Robust",
+      "2 - Not Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses the appropriateness and correctness of API or library usage in the solution.",
+    "accepted_values": [
+      "0 - Excellent Usage",
+      "1 - Acceptable Usage",
+      "2 - Poor Usage"
+    ]
+  },
+  "readability": {
+    "description": "Evaluates the clarity of the code, including naming conventions, comments, and structure.",
+    "accepted_values": [
+      "0 - Very Readable",
+      "1 - Somewhat Readable",
+      "2 - Not Readable"
+    ]
+  },
+  "maintainability": {
+    "description": "Measures how easy it is to modify the code in the future, considering structure and documentation.",
+    "accepted_values": [
+      "0 - Highly Maintainable",
+      "1 - Moderately Maintainable",
+      "2 - Not Maintainable"
+    ]
+  },
+  "error_handling": {
+    "description": "Assesses how well the code handles errors and special cases, including security vulnerabilities.",
+    "accepted_values": [
+      "0 - Excellent Handling",
+      "1 - Acceptable Handling",
+      "2 - Poor Handling"
+    ]
+  }
+}

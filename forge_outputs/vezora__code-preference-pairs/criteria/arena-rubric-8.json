@@ -1,0 +1,60 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the code solves the stated requirements and behaves as expected.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses how well the solution handles edge cases related to the problem.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Fair",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "Evaluates the algorithm's performance in terms of time complexity and space complexity where relevant.",
+    "accepted_values": [
+      "0 - Inefficient",
+      "1 - Acceptable",
+      "2 - Efficient"
+    ]
+  },
+  "robustness": {
+    "description": "Measures the solution's ability to handle unexpected inputs or situations without failing.",
+    "accepted_values": [
+      "0 - Fragile",
+      "1 - Moderate",
+      "2 - Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses the appropriateness of using libraries or APIs in the solution, especially against the task requirements.",
+    "accepted_values": [
+      "0 - Inappropriate",
+      "1 - Acceptable",
+      "2 - Optimal"
+    ]
+  },
+  "readability_maintainability": {
+    "description": "Evaluates how easy it is to read, understand, and maintain the code.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Fair",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "error_security_handling": {
+    "description": "Assesses how well the solution handles errors and avoids potential security issues.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Fair",
+      "2 - Good"
+    ]
+  }
+}

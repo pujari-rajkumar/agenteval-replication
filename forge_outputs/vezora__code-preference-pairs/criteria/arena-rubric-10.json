@@ -1,0 +1,65 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the solution meets the stated requirements and performs the correct operations without errors.",
+    "accepted_values": [
+      "0: Incorrect",
+      "1: Partially Correct",
+      "2: Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses the solution's ability to handle edge cases effectively, such as empty inputs or maximum constraints.",
+    "accepted_values": [
+      "0: Poor",
+      "1: Acceptable",
+      "2: Good",
+      "3: Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time and space complexity of the solution, ensuring it adheres to the required performance benchmarks.",
+    "accepted_values": [
+      "0: Inefficient",
+      "1: Acceptable",
+      "2: Efficient"
+    ]
+  },
+  "robustness": {
+    "description": "Determines how well the solution handles invalid inputs and unexpected scenarios without failing.",
+    "accepted_values": [
+      "0: Very Poor",
+      "1: Poor",
+      "2: Acceptable",
+      "3: Good",
+      "4: Excellent"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Evaluates the proper and effective use of APIs or libraries in the solution, ensuring they are utilized appropriately.",
+    "accepted_values": [
+      "0: Misused",
+      "1: Minimal Usage",
+      "2: Appropriate Usage",
+      "3: Optimal Usage"
+    ]
+  },
+  "readability_maintainability": {
+    "description": "Assesses the clarity and organization of the code, including naming conventions, comments, and overall structure.",
+    "accepted_values": [
+      "0: Poor",
+      "1: Fair",
+      "2: Good",
+      "3: Excellent"
+    ]
+  },
+  "error_handling_security": {
+    "description": "Evaluates the solution's ability to handle errors gracefully and to avoid potential security vulnerabilities.",
+    "accepted_values": [
+      "0: Very Poor",
+      "1: Poor",
+      "2: Acceptable",
+      "3: Good",
+      "4: Excellent"
+    ]
+  }
+}

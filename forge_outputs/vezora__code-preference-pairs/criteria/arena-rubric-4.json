@@ -1,0 +1,66 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the solution correctly implements the functionality as per the requirements stated in the prompt.",
+    "accepted_values": [
+      "0 (incorrect)",
+      "1 (partially correct)",
+      "2 (correct)"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses how well the solution addresses edge cases or uncommon scenarios that may arise during execution.",
+    "accepted_values": [
+      "0 (none)",
+      "1 (some)",
+      "2 (well-handled)"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time and space complexity of the solution, ensuring it meets the specified constraints.",
+    "accepted_values": [
+      "0 (inefficient)",
+      "1 (acceptable)",
+      "2 (optimal)"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates the ability of the solution to handle unexpected inputs or conditions without crashing.",
+    "accepted_values": [
+      "0 (not robust)",
+      "1 (somewhat robust)",
+      "2 (very robust)"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses the appropriateness of using specific APIs or libraries in the solution, considering whether the task allows their use.",
+    "accepted_values": [
+      "0 (poor usage)",
+      "1 (acceptable usage)",
+      "2 (excellent usage)"
+    ]
+  },
+  "readability": {
+    "description": "Evaluates how easy the code is to read and understand, including variable naming, comments, and overall structure.",
+    "accepted_values": [
+      "0 (poor readability)",
+      "1 (moderate readability)",
+      "2 (excellent readability)"
+    ]
+  },
+  "maintainability": {
+    "description": "Assesses how easy it would be for another developer to modify or extend the solution in the future.",
+    "accepted_values": [
+      "0 (difficult to maintain)",
+      "1 (somewhat maintainable)",
+      "2 (easy to maintain)"
+    ]
+  },
+  "error_handling": {
+    "description": "Measures the effectiveness of the solution in handling potential errors and exceptions safely and securely.",
+    "accepted_values": [
+      "0 (no error handling)",
+      "1 (basic error handling)",
+      "2 (thorough error handling)"
+    ]
+  }
+}

@@ -1,0 +1,126 @@
+# forge — Arena Expert-5k Rubric Generation
+
+Automated rubric generation pipeline for evaluating AI assistant responses,
+applied to these datasets:
+
+- [`lmarena-ai/arena-expert-5k`](https://huggingface.co/datasets/lmarena-ai/arena-expert-5k)
+- [`Vezora/Code-Preference-Pairs`](https://huggingface.co/datasets/Vezora/Code-Preference-Pairs)
+- [`HumanLLMs/Human-Like-DPO-Dataset`](https://huggingface.co/datasets/HumanLLMs/Human-Like-DPO-Dataset)
+
+Adapted from the AutoGen-based criteria generation pipeline in
+`naacl2025submission/scaling_and_verification/criteria_generation/`.
+
+## Directory structure
+
+```
+forge/
+├── run_rubric_generation.py   # CLI entry point
+├── requirements.txt
+├── .env.example               # copy to .env and add your API key
+├── rubric_generation/
+│   ├── config.py              # all tuneable parameters and paths
+│   ├── data_loading.py        # HuggingFace dataset helpers
+│   ├── critic.py              # Checkpoint 1: multi-seed critic agent
+│   ├── summarizer.py          # Checkpoint 2: criteria merging agent
+│   ├── quantifier.py          # Checkpoint 3: optional scoring agent
+│   └── pipeline.py            # high-level orchestrator
+└── forge_outputs/
+    ├── lmarena-ai__arena-expert-5k/
+    ├── vezora__code-preference-pairs/
+    └── humanllms__human-like-dpo-dataset/
+```
+
+## Setup
+
+```bash
+# 1. Install dependencies
+pip install -r requirements.txt
+
+# 2. Configure your API key
+cp .env.example .env
+# then edit .env and set OPENAI_API_KEY
+```
+
+### Troubleshooting: AutoGen imports
+
+Older versions (`pyautogen` 0.2.x) supported `import autogen`. **`pyautogen` 0.10+ installs the modern AgentChat stack** (`autogen_agentchat`), and **there is generally no usable top-level `autogen` import** from that package anymore.
+
+Install exactly what `requirements.txt` pins (especially `pyautogen` + `autogen-ext[openai]`) using **the interpreter you run**:
+
+```bash
+python -m pip install -r requirements.txt
+python -m pip show pyautogen autogen-ext autogen-agentchat
+```
+
+If you still want the legacy behavior, recreate a separate environment with **`pyautogen` 0.2.x**, but note it typically pins Python `<3.13`.
+
+## Running the pipeline
+
+### Full run (critic + summarizer)
+```bash
+python run_rubric_generation.py --api-key sk-...
+```
+
+### Run all supported datasets independently
+```bash
+python run_rubric_generation.py --api-key sk-... \
+  --datasets "lmarena-ai/arena-expert-5k,Vezora/Code-Preference-Pairs,HumanLLMs/Human-Like-DPO-Dataset"
+```
+
+### Quick test (3 seeds, 100 dataset rows)
+```bash
+python run_rubric_generation.py --api-key sk-... \
+    --num-critic-seeds 3 --max-samples 100
+```
+
+### Skip critic, re-run summarizer only
+```bash
+python run_rubric_generation.py --api-key sk-... --skip-critic
+```
+
+### Full run + quantifier on 50 battles
+```bash
+python run_rubric_generation.py --api-key sk-... --run-quantifier --quantifier-max-samples 50
+```
+
+### All options
+```
+--api-key               OpenAI API key (or set OPENAI_API_KEY env var)
+--datasets              Comma-separated dataset names to run independently
+--dataset-split         Dataset split to load (default: train)
+--reset-outputs         Delete each dataset's `forge_outputs/<slug>/` tree before running (clean regen)
+--model                 LLM model name (default: gpt-4o-mini)
+--num-critic-seeds      Independent critic runs (default: 15)
+--num-quantifier-seeds  Quantifier scoring passes (default: 3)
+--max-samples           Cap dataset rows for faster testing
+--skip-critic           Load existing seed files instead of re-running
+--skip-summarizer       Load existing final_criteria.json
+--run-quantifier        Also score conversations with the rubric
+--quantifier-max-samples Max battles to score (default: 50)
+```
+
+## How the pipeline works
+
+1. **Data loading** — Pulls `lmarena-ai/arena-expert-5k` from Hugging Face.
+   Each row is a head-to-head battle between two LLMs judged by an expert.
+
+2. **Critic (Checkpoint 1)** — Runs an AutoGen `AssistantAgent` N times with
+   different `cache_seed` values. Each run proposes a distinct set of evaluation
+   criteria in JSON format. Results saved to dataset-specific `forge_outputs/<dataset>/criteria/`.
+
+3. **Summarizer (Checkpoint 2)** — A second agent merges all per-seed criteria
+   dicts into a single rubric with ≤25 distinct, well-described criteria.
+   Result saved to dataset-specific `forge_outputs/<dataset>/final_criteria.json`.
+
+4. **Quantifier (Checkpoint 3, optional)** — Scores a sample of rows against
+   the final rubric. Results saved to dataset-specific `forge_outputs/<dataset>/evaluated_problems-{seed}.json`.
+
+## Dataset fields used
+
+| Field | Used for |
+|---|---|
+| `conversation_a / b` | The two model responses being evaluated |
+| `model_a / b` | Model names (for labelling) |
+| `winner` | Identifies successful vs. unsuccessful examples |
+| `language` | Available for filtering (default: all languages) |
+| `occupational_tags` | Available for domain-specific analysis |

@@ -1,0 +1,66 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the solution meets the stated requirements and produces correct outputs for given inputs.",
+    "accepted_values": [
+      "correct",
+      "partially_correct",
+      "incorrect"
+    ]
+  },
+  "bug_sensitivity": {
+    "description": "Assesses the solution's ability to handle edge cases and identify subtle bugs introduced during the editing process.",
+    "accepted_values": [
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "engineering_quality": {
+    "description": "Measures the overall quality of the engineering practices used in the code, including efficiency and use of best practices.",
+    "accepted_values": [
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "efficiency": {
+    "description": "Judges the time and space complexity of the solution, ensuring it meets specified performance requirements.",
+    "accepted_values": [
+      "optimal",
+      "acceptable",
+      "suboptimal"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates the solution's ability to handle invalid inputs and unexpected situations gracefully.",
+    "accepted_values": [
+      "robust",
+      "moderately_robust",
+      "fragile"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses the appropriate use of APIs and libraries, ensuring that they are utilized correctly and effectively.",
+    "accepted_values": [
+      "ideal",
+      "appropriate",
+      "inappropriate"
+    ]
+  },
+  "readability_maintainability": {
+    "description": "Evaluates how easy the code is to read and maintain, including naming conventions and documentation.",
+    "accepted_values": [
+      "high",
+      "medium",
+      "low"
+    ]
+  },
+  "error_security_handling": {
+    "description": "Measures the solution's ability to handle errors safely and its resistance to common security vulnerabilities.",
+    "accepted_values": [
+      "secure",
+      "partially_secure",
+      "insecure"
+    ]
+  }
+}

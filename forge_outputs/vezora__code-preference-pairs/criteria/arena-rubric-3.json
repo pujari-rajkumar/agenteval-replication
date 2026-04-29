@@ -1,0 +1,64 @@
+{
+  "functional_correctness": {
+    "description": "The solution meets the functional requirements as stated in the prompt, producing the correct output for all specified cases.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "The solution effectively handles edge cases that could arise in the problem, ensuring robustness against unusual inputs or conditions.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "The solution adheres to the required time complexity and is optimized for performance, particularly given constraints on input size.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "robustness": {
+    "description": "The solution demonstrates resilience to unexpected inputs or errors, maintaining proper functionality under various conditions.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "api_library_usage": {
+    "description": "The solution appropriately uses programming constructs, libraries, or APIs relevant to the task while avoiding unnecessary complexity.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "readability_maintainability": {
+    "description": "The code is easy to read and understand, with clear structure and comments, making it maintainable for future development.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "error_security_handling": {
+    "description": "The solution includes measures to handle potential errors and security vulnerabilities, thus preventing common pitfalls.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Average",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the solution meets the stated requirements and produces the correct output for the given inputs.",
+    "accepted_values": [
+      "0 - Incorrect",
+      "1 - Partially Correct",
+      "2 - Correct"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses how well the solution handles edge cases or unusual inputs that could affect its performance or correctness.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Fair",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time and space complexity of the solution, ensuring it meets specified performance requirements.",
+    "accepted_values": [
+      "0 - Inefficient",
+      "1 - Acceptable",
+      "2 - Efficient",
+      "3 - Optimal"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates the solution's ability to handle unexpected inputs or situations without failing.",
+    "accepted_values": [
+      "0 - Fragile",
+      "1 - Somewhat Robust",
+      "2 - Robust",
+      "3 - Very Robust"
+    ]
+  },
+  "api_library_usage": {
+    "description": "Assesses the appropriateness and effectiveness of any APIs or libraries used in the solution.",
+    "accepted_values": [
+      "0 - Poor",
+      "1 - Adequate",
+      "2 - Good",
+      "3 - Excellent"
+    ]
+  },
+  "readability": {
+    "description": "Evaluates how easy the code is to read, understand, and maintain, including naming conventions and code structure.",
+    "accepted_values": [
+      "0 - Difficult to Read",
+      "1 - Somewhat Readable",
+      "2 - Readable",
+      "3 - Very Readable"
+    ]
+  },
+  "error_handling": {
+    "description": "Assesses how well the code anticipates and handles potential errors and security vulnerabilities.",
+    "accepted_values": [
+      "0 - Poor Handling",
+      "1 - Fair Handling",
+      "2 - Good Handling",
+      "3 - Excellent Handling"
+    ]
+  },
+  "bug_sensitivity": {
+    "description": "Assesses the solution's ability to handle edge cases and identify subtle bugs introduced during the editing process.",
+    "accepted_values": [
+      "0 - High Sensitivity",
+      "1 - Medium Sensitivity",
+      "2 - Low Sensitivity"
+    ]
+  },
+  "engineering_quality": {
+    "description": "Measures the overall quality of the code, including structure, adherence to best practices, and use of efficient algorithms.",
+    "accepted_values": [
+      "0 - Poor Quality",
+      "1 - Acceptable Quality",
+      "2 - High Quality"
+    ]
+  },
+  "maintainability": {
+    "description": "Evaluates how easy it is to modify or extend the solution in the future, considering structure and documentation.",
+    "accepted_values": [
+      "0 - Difficult to Maintain",
+      "1 - Moderately Maintainable",
+      "2 - Easy to Maintain"
+    ]
+  },
+  "error_security_handling": {
+    "description": "Measures how well the solution safeguards against potential security vulnerabilities and errors that could lead to failures.",
+    "accepted_values": [
+      "0 - Poor Security",
+      "1 - Fair Security",
+      "2 - Good Security",
+      "3 - Excellent Security"
+    ]
+  },
+  "clarity": {
+    "description": "Assesses how clear and comprehensible the code is, including comments and overall structure.",
+    "accepted_values": [
+      "0 - Very Poor",
+      "1 - Poor",
+      "2 - Acceptable",
+      "3 - Good",
+      "4 - Excellent"
+    ]
+  },
+  "performance": {
+    "description": "Evaluates the code's performance, particularly its time and space complexity relative to the task requirements.",
+    "accepted_values": [
+      "0 - Very Inefficient",
+      "1 - Inefficient",
+      "2 - Efficient",
+      "3 - Very Efficient"
+    ]
+  },
+  "error_handling_security": {
+    "description": "Assesses how well the code anticipates and handles potential errors, user inputs, or security vulnerabilities.",
+    "accepted_values": [
+      "0 - Very Poor",
+      "1 - Poor",
+      "2 - Acceptable",
+      "3 - Good",
+      "4 - Excellent"
+    ]
+  },
+  "boundary_conditions": {
+    "description": "Evaluates how well the code handles boundary conditions and limits.",
+    "accepted_values": [
+      "0 - Poor Handling",
+      "1 - Fair Handling",
+      "2 - Good Handling"
+    ]
+  },
+  "compliance_with_standards": {
+    "description": "Assesses adherence to coding standards and guidelines.",
+    "accepted_values": [
+      "0 - Non-compliant",
+      "1 - Partially Compliant",
+      "2 - Fully Compliant"
+    ]
+  },
+  "testing_and_validation": {
+    "description": "Measures the extent to which the solution includes tests to validate functionality and robustness.",
+    "accepted_values": [
+      "0 - No Tests",
+      "1 - Insufficient Tests",
+      "2 - Adequate Tests",
+      "3 - Comprehensive Tests"
+    ]
+  },
+  "modularity": {
+    "description": "Evaluates the separation of functionality into distinct modules or functions, promoting reusability.",
+    "accepted_values": [
+      "0 - Poorly Modularized",
+      "1 - Somewhat Modularized",
+      "2 - Well Modularized"
+    ]
+  },
+  "documentation": {
+    "description": "Assesses the completeness and clarity of comments and documentation associated with the code.",
+    "accepted_values": [
+      "0 - Poor Documentation",
+      "1 - Fair Documentation",
+      "2 - Good Documentation",
+      "3 - Excellent Documentation"
+    ]
+  }
+}

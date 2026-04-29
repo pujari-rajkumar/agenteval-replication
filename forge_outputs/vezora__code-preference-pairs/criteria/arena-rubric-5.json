@@ -1,0 +1,76 @@
+{
+  "functional_correctness": {
+    "description": "Evaluates whether the code correctly implements the requirements of the task as specified in the prompt.",
+    "accepted_values": [
+      "high",
+      "medium",
+      "low",
+      "none"
+    ]
+  },
+  "edge_case_handling": {
+    "description": "Assesses how well the code handles edge cases or unusual inputs that could affect its performance or correctness.",
+    "accepted_values": [
+      "excellent",
+      "good",
+      "fair",
+      "poor",
+      "none"
+    ]
+  },
+  "efficiency": {
+    "description": "Measures the time complexity of the solution and whether it meets the performance requirements outlined in the prompt.",
+    "accepted_values": [
+      "O(N)",
+      "sub-O(N)",
+      "O(N^2)",
+      "exceeds O(N)"
+    ]
+  },
+  "robustness": {
+    "description": "Evaluates the code's ability to handle unexpected inputs or conditions without crashing or producing incorrect results.",
+    "accepted_values": [
+      "very robust",
+      "robust",
+      "somewhat robust",
+      "not robust"
+    ]
+  },
+  "api_usage": {
+    "description": "Assesses the appropriateness and correctness of using APIs or libraries relevant to the programming task.",
+    "accepted_values": [
+      "excellent",
+      "good",
+      "acceptable",
+      "poor",
+      "none"
+    ]
+  },
+  "readability": {
+    "description": "Measures how easy it is to read and understand the code, including naming conventions and code structure.",
+    "accepted_values": [
+      "very readable",
+      "readable",
+      "somewhat readable",
+      "not readable"
+    ]
+  },
+  "maintainability": {
+    "description": "Evaluates how easy it is to modify or extend the code, considering factors like complexity and documentation.",
+    "accepted_values": [
+      "very maintainable",
+      "maintainable",
+      "somewhat maintainable",
+      "not maintainable"
+    ]
+  },
+  "error_handling_security": {
+    "description": "Assesses how well the code anticipates and handles potential errors, user inputs, or security concerns.",
+    "accepted_values": [
+      "very secure",
+      "secure",
+      "somewhat secure",
+      "not secure"
+    ]
+  }
+}

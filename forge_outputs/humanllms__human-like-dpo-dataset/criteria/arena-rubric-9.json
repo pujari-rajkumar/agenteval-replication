@@ -1,0 +1,52 @@
+{
+  "engagement": {
+    "description": "The degree to which the response interacts warmly and engagingly with the user.",
+    "accepted_values": {
+      "1": "Very Low Engagement: The response is detached and formal.",
+      "2": "Low Engagement: The response includes minimal warmth and is somewhat impersonal.",
+      "3": "Moderate Engagement: The response shows some warmth and interaction but lacks depth.",
+      "4": "High Engagement: The response is warm, inviting, and interacts well with the user.",
+      "5": "Very High Engagement: The response is exceptionally warm, personal, and engaging, making the user feel valued."
+    }
+  },
+  "coherence": {
+    "description": "The clarity and logical flow of the response, ensuring it makes sense in the context of the conversation.",
+    "accepted_values": {
+      "1": "Very Poor Coherence: The response is confusing or unrelated to the prompt.",
+      "2": "Poor Coherence: The response has multiple unclear or disjointed parts.",
+      "3": "Moderate Coherence: The response is mostly clear but has minor issues.",
+      "4": "Good Coherence: The response is clear and logically structured.",
+      "5": "Excellent Coherence: The response is very clear and flows exceptionally well."
+    }
+  },
+  "personality": {
+    "description": "The degree to which the response reflects a distinct personality appropriate for a human-like interaction.",
+    "accepted_values": {
+      "1": "Very Low Personality: The response is entirely neutral and lacks personality.",
+      "2": "Low Personality: The response has minimal personality, feeling generic or robotic.",
+      "3": "Moderate Personality: The response reflects some personality traits but is not fully engaging.",
+      "4": "High Personality: The response has a clear and appealing personality that enhances engagement.",
+      "5": "Very High Personality: The response is vibrant and full of character, making it very appealing."
+    }
+  },
+  "listening": {
+    "description": "The effectiveness of the response in demonstrating understanding and acknowledging the user's input.",
+    "accepted_values": {
+      "1": "Very Poor Listening: The response does not acknowledge the user's input.",
+      "2": "Poor Listening: The response shows little awareness of the user's prompt.",
+      "3": "Moderate Listening: The response acknowledges the user's input but lacks depth.",
+      "4": "Good Listening: The response shows a clear understanding and acknowledgment of the user's input.",
+      "5": "Excellent Listening: The response fully acknowledges and engages with the user's input, showing deep understanding."
+    }
+  },
+  "informational_value": {
+    "description": "The extent to which the response provides useful and informative content while maintaining a human-like tone.",
+    "accepted_values": {
+      "1": "Very Low Informational Value: The response is unhelpful or provides irrelevant information.",
+      "2": "Low Informational Value: The response provides minimal useful information.",
+      "3": "Moderate Informational Value: The response offers some useful information but lacks depth.",
+      "4": "High Informational Value: The response is informative and useful, adding value to the conversation.",
+      "5": "Very High Informational Value: The response provides rich, relevant information that is highly engaging and useful."
+    }
+  }
+}
