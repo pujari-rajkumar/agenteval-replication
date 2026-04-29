@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Entry point for the arena-expert-5k rubric generation pipeline.
+Entry point for the AgentEval replication rubric generation pipeline (multi-dataset).
 
 Usage examples:
 
@@ -36,7 +36,7 @@ from rubric_generation.config import DEFAULT_DATASET_NAME, SUPPORTED_DATASETS
 
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
-        description="Generate evaluation rubrics for arena-expert-5k conversations."
+        description="Generate evaluation rubrics for supported Hugging Face preference/chat datasets."
     )
     p.add_argument(
         "--datasets",
@@ -104,7 +104,7 @@ def parse_args() -> argparse.Namespace:
         "--reset-outputs",
         action="store_true",
         help=(
-            "Before each dataset run, delete that dataset's folder under forge_outputs/ "
+            "Before each dataset run, delete that dataset's folder under experiment_outputs/ "
             "(criteria seeds, final_criteria.json, quantifier JSON). Use for a clean regeneration."
         ),
     )

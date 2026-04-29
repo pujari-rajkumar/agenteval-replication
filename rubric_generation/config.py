@@ -111,7 +111,7 @@ TASK_NAME, TASK_DESCRIPTION = _arena_task()
 # Default to a local folder in this repository.
 # Override by setting OUTPUT_DIR env var.
 DEFAULT_OUTPUT_DIR = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "forge_outputs")
+    os.path.join(os.path.dirname(__file__), "..", "experiment_outputs")
 )
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", DEFAULT_OUTPUT_DIR)
 
@@ -125,7 +125,7 @@ def get_dataset_output_paths(dataset_name: str) -> dict[str, str]:
     Build dataset-specific output paths under OUTPUT_DIR.
 
     Example:
-      forge_outputs/lmarena-ai__arena-expert-5k/...
+      experiment_outputs/lmarena-ai__arena-expert-5k/...
     """
     dataset_dir = os.path.join(OUTPUT_DIR, dataset_to_slug(dataset_name))
     return {

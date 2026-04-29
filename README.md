@@ -1,4 +1,4 @@
-# forge — Arena Expert-5k Rubric Generation
+# AgentEval Replication — Preference / Chat Rubric Generation
 
 Automated rubric generation pipeline for evaluating AI assistant responses,
 applied to these datasets:
@@ -13,7 +13,7 @@ Adapted from the AutoGen-based criteria generation pipeline in
 ## Directory structure
 
 ```
-forge/
+AgentEval Replication/
 ├── run_rubric_generation.py   # CLI entry point
 ├── requirements.txt
 ├── .env.example               # copy to .env and add your API key
@@ -24,7 +24,7 @@ forge/
 │   ├── summarizer.py          # Checkpoint 2: criteria merging agent
 │   ├── quantifier.py          # Checkpoint 3: optional scoring agent
 │   └── pipeline.py            # high-level orchestrator
-└── forge_outputs/
+└── experiment_outputs/
     ├── lmarena-ai__arena-expert-5k/
     ├── vezora__code-preference-pairs/
     └── humanllms__human-like-dpo-dataset/
@@ -88,7 +88,7 @@ python run_rubric_generation.py --api-key sk-... --run-quantifier --quantifier-m
 --api-key               OpenAI API key (or set OPENAI_API_KEY env var)
 --datasets              Comma-separated dataset names to run independently
 --dataset-split         Dataset split to load (default: train)
---reset-outputs         Delete each dataset's `forge_outputs/<slug>/` tree before running (clean regen)
+--reset-outputs         Delete each dataset's `experiment_outputs/<slug>/` tree before running (clean regen)
 --model                 LLM model name (default: gpt-4o-mini)
 --num-critic-seeds      Independent critic runs (default: 15)
 --num-quantifier-seeds  Quantifier scoring passes (default: 3)
@@ -101,19 +101,23 @@ python run_rubric_generation.py --api-key sk-... --run-quantifier --quantifier-m
 
 ## How the pipeline works
 
-1. **Data loading** — Pulls `lmarena-ai/arena-expert-5k` from Hugging Face.
-   Each row is a head-to-head battle between two LLMs judged by an expert.
+1. **Data loading** — Pulls whichever dataset(s) you pass to `--datasets`
+   (`lmarena-ai/arena-expert-5k`, `Vezora/Code-Preference-Pairs`, or `HumanLLMs/Human-Like-DPO-Dataset`)
+   from Hugging Face and formats rows into prompts for criterion generation.
+
+   For `lmarena-ai/arena-expert-5k`, each row is a head-to-head battle between two LLMs judged by an expert.
+   For preference-pair datasets, rows are modeled as preference comparisons over prompts/responses.
 
 2. **Critic (Checkpoint 1)** — Runs an AutoGen `AssistantAgent` N times with
    different `cache_seed` values. Each run proposes a distinct set of evaluation
-   criteria in JSON format. Results saved to dataset-specific `forge_outputs/<dataset>/criteria/`.
+   criteria in JSON format. Results saved to dataset-specific `experiment_outputs/<dataset>/criteria/`.
 
 3. **Summarizer (Checkpoint 2)** — A second agent merges all per-seed criteria
    dicts into a single rubric with ≤25 distinct, well-described criteria.
-   Result saved to dataset-specific `forge_outputs/<dataset>/final_criteria.json`.
+   Result saved to dataset-specific `experiment_outputs/<dataset>/final_criteria.json`.
 
 4. **Quantifier (Checkpoint 3, optional)** — Scores a sample of rows against
-   the final rubric. Results saved to dataset-specific `forge_outputs/<dataset>/evaluated_problems-{seed}.json`.
+   the final rubric. Results saved to dataset-specific `experiment_outputs/<dataset>/evaluated_problems-{seed}.json`.
 
 ## Dataset fields used
 
