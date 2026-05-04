@@ -6,6 +6,7 @@ applied to these datasets:
 - [`lmarena-ai/arena-expert-5k`](https://huggingface.co/datasets/lmarena-ai/arena-expert-5k)
 - [`Vezora/Code-Preference-Pairs`](https://huggingface.co/datasets/Vezora/Code-Preference-Pairs)
 - [`HumanLLMs/Human-Like-DPO-Dataset`](https://huggingface.co/datasets/HumanLLMs/Human-Like-DPO-Dataset)
+- [`Anthropic/hh-rlhf`](https://huggingface.co/datasets/Anthropic/hh-rlhf) (full `chosen` / `rejected` transcripts)
 
 Adapted from the AutoGen-based criteria generation pipeline in
 `naacl2025submission/scaling_and_verification/criteria_generation/`.
@@ -27,7 +28,8 @@ AgentEval Replication/
 └── experiment_outputs/
     ├── lmarena-ai__arena-expert-5k/
     ├── vezora__code-preference-pairs/
-    └── humanllms__human-like-dpo-dataset/
+    ├── humanllms__human-like-dpo-dataset/
+    └── anthropic__hh-rlhf/
 ```
 
 ## Setup
@@ -64,7 +66,7 @@ python run_rubric_generation.py --api-key sk-...
 ### Run all supported datasets independently
 ```bash
 python run_rubric_generation.py --api-key sk-... \
-  --datasets "lmarena-ai/arena-expert-5k,Vezora/Code-Preference-Pairs,HumanLLMs/Human-Like-DPO-Dataset"
+  --datasets "lmarena-ai/arena-expert-5k,Vezora/Code-Preference-Pairs,HumanLLMs/Human-Like-DPO-Dataset,Anthropic/hh-rlhf"
 ```
 
 ### Quick test (3 seeds, 100 dataset rows)
@@ -102,11 +104,12 @@ python run_rubric_generation.py --api-key sk-... --run-quantifier --quantifier-m
 ## How the pipeline works
 
 1. **Data loading** — Pulls whichever dataset(s) you pass to `--datasets`
-   (`lmarena-ai/arena-expert-5k`, `Vezora/Code-Preference-Pairs`, or `HumanLLMs/Human-Like-DPO-Dataset`)
+   (`lmarena-ai/arena-expert-5k`, `Vezora/Code-Preference-Pairs`, `HumanLLMs/Human-Like-DPO-Dataset`, or `Anthropic/hh-rlhf`)
    from Hugging Face and formats rows into prompts for criterion generation.
 
    For `lmarena-ai/arena-expert-5k`, each row is a head-to-head battle between two LLMs judged by an expert.
    For preference-pair datasets, rows are modeled as preference comparisons over prompts/responses.
+   For `Anthropic/hh-rlhf`, each row has full multi-turn transcripts in `chosen` vs `rejected` (helpfulness / harmlessness preference data).
 
 2. **Critic (Checkpoint 1)** — Runs an AutoGen `AssistantAgent` N times with
    different `cache_seed` values. Each run proposes a distinct set of evaluation
@@ -128,3 +131,4 @@ python run_rubric_generation.py --api-key sk-... --run-quantifier --quantifier-m
 | `winner` | Identifies successful vs. unsuccessful examples |
 | `language` | Available for filtering (default: all languages) |
 | `occupational_tags` | Available for domain-specific analysis |
+| `chosen` / `rejected` | Preferred vs alternate full transcripts (`Anthropic/hh-rlhf` and prompt-based DPO rows) |

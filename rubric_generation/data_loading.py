@@ -27,6 +27,13 @@ def _format_dpo_row(row: dict[str, Any]) -> str:
     user_parts = [p for p in [prompt, user_input] if p]
     user_text = "\n".join(user_parts).strip()
 
+    # HH-RLHF-style rows: only full transcript strings (no isolated prompt field).
+    if not user_text and chosen and rejected:
+        return (
+            f"=== Preferred transcript ===\n{chosen}\n\n"
+            f"=== Rejected transcript ===\n{rejected}"
+        )
+
     return (
         f"=== User Prompt ===\n{user_text}\n\n"
         f"=== Preferred Response ===\n{chosen}\n\n"
@@ -116,14 +123,22 @@ def sample_examples(
             user_text = "\n".join(user_parts).strip()
             chosen = str(row.get("chosen", row.get("accepted", ""))).strip()
             rejected = str(row.get("rejected", "")).strip()
-            if len(successes) < n_success:
-                successes.append(
+            if not user_text and chosen and rejected:
+                good, bad = (
+                    f"=== Preferred transcript ===\n{chosen}",
+                    f"=== Rejected transcript ===\n{rejected}",
+                )
+            else:
+                good = (
                     f"=== User Prompt ===\n{user_text}\n\n=== Response ===\n{chosen}"
                 )
-            if len(failures) < n_failure:
-                failures.append(
+                bad = (
                     f"=== User Prompt ===\n{user_text}\n\n=== Response ===\n{rejected}"
                 )
+            if len(successes) < n_success:
+                successes.append(good)
+            if len(failures) < n_failure:
+                failures.append(bad)
         else:
             # Unknown row schema; ignore for seed examples.
             pass

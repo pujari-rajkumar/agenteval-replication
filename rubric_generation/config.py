@@ -17,6 +17,7 @@ SUPPORTED_DATASETS = (
     "lmarena-ai/arena-expert-5k",
     "Vezora/Code-Preference-Pairs",
     "HumanLLMs/Human-Like-DPO-Dataset",
+    "Anthropic/hh-rlhf",
 )
 
 # ── Pipeline hyper-params ──────────────────────────────────────────────────────
@@ -88,10 +89,29 @@ Paper pointer: https://arxiv.org/abs/2501.05032 \
     return name, description
 
 
+def _hh_rlhf_task() -> tuple[str, str]:
+    name = "Human preference judgments for assistant dialogues (RLHF-style transcripts)"
+    description = """\
+You are judging full multi-turn transcripts where human labelers preferred one assistant \
+completion over another—the Anthropic HH-RLHF setting used to train harmless and helpful \
+assistants via RL from human feedback (see Training a Helpful and Harmless Assistant with \
+RLHF, arXiv:2204.05862).
+
+Each row pairs a preferred vs rejected completion for the same user context (both sides appear \
+as full \"Human: ... Assistant: ...\" style transcripts). Infer what makes one trajectory \
+better aligned with helpful, honest, and harmless assistance: staying on task, admitting \
+limits, refusing unsafe requests appropriately, factual care, clarity, tone, and not over-claiming.
+
+Dataset context: https://huggingface.co/datasets/Anthropic/hh-rlhf \
+"""
+    return name, description
+
+
 _DATASET_TASKS: dict[str, tuple[str, str]] = {
     "lmarena-ai/arena-expert-5k": _arena_task(),
     "Vezora/Code-Preference-Pairs": _code_preference_pairs_task(),
     "HumanLLMs/Human-Like-DPO-Dataset": _human_like_dpo_task(),
+    "Anthropic/hh-rlhf": _hh_rlhf_task(),
 }
 
 
