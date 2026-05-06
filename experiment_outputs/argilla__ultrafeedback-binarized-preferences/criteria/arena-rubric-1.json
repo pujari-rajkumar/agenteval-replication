@@ -1,0 +1,62 @@
+{
+  "factual_accuracy": {
+    "description": "The correctness of factual claims made in the response, especially regarding countries and their geographical borders.",
+    "accepted_values": [
+      "1 - Incorrect",
+      "2 - Mostly Incorrect",
+      "3 - Somewhat Correct",
+      "4 - Mostly Correct",
+      "5 - Completely Correct"
+    ]
+  },
+  "instruction_adherence": {
+    "description": "How well the response follows the user's instruction and the provided starter code.",
+    "accepted_values": [
+      "1 - Not at all",
+      "2 - Slightly",
+      "3 - Moderately",
+      "4 - Mostly",
+      "5 - Fully"
+    ]
+  },
+  "scope_and_completeness": {
+    "description": "The extent to which the response covers the required information and steps necessary to accomplish the task.",
+    "accepted_values": [
+      "1 - Very Incomplete",
+      "2 - Incomplete",
+      "3 - Adequate",
+      "4 - Mostly Complete",
+      "5 - Fully Complete"
+    ]
+  },
+  "coherent_reasoning": {
+    "description": "The logical flow of ideas and clarity in the explanation provided in the response.",
+    "accepted_values": [
+      "1 - Very Poor",
+      "2 - Poor",
+      "3 - Average",
+      "4 - Good",
+      "5 - Excellent"
+    ]
+  },
+  "safe_behavior": {
+    "description": "The degree to which the response avoids suggesting unsafe or inappropriate actions.",
+    "accepted_values": [
+      "1 - Very Unsafe",
+      "2 - Unsafe",
+      "3 - Neutral",
+      "4 - Safe",
+      "5 - Very Safe"
+    ]
+  },
+  "formatting_adherence": {
+    "description": "How well the response complies with the required formatting or constraints as specified in the task.",
+    "accepted_values": [
+      "1 - Not at all",
+      "2 - Slightly",
+      "3 - Moderately",
+      "4 - Mostly",
+      "5 - Fully"
+    ]
+  }
+}

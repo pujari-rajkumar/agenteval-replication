@@ -18,11 +18,38 @@ def load_arena_dataset(
     return list(ds)
 
 
+def _preference_chosen_text(row: dict[str, Any]) -> str:
+    for key in ("chosen", "accepted", "chosen_response"):
+        val = row.get(key)
+        if val is not None and str(val).strip():
+            return str(val).strip()
+    return ""
+
+
+def _preference_rejected_text(row: dict[str, Any]) -> str:
+    val = row.get("rejected")
+    if val is not None and str(val).strip():
+        return str(val).strip()
+    val = row.get("rejected_response")
+    if val is not None and str(val).strip():
+        return str(val).strip()
+    rlist = row.get("rejected_responses")
+    if isinstance(rlist, list):
+        for item in rlist:
+            if item is not None and str(item).strip():
+                return str(item).strip()
+    return ""
+
+
+def _is_preference_pair_row(row: dict[str, Any]) -> bool:
+    return bool(_preference_chosen_text(row) and _preference_rejected_text(row))
+
+
 def _format_dpo_row(row: dict[str, Any]) -> str:
     prompt = str(row.get("prompt", row.get("instruction", ""))).strip()
     user_input = str(row.get("input", "")).strip()
-    chosen = str(row.get("chosen", row.get("accepted", ""))).strip()
-    rejected = str(row.get("rejected", "")).strip()
+    chosen = _preference_chosen_text(row)
+    rejected = _preference_rejected_text(row)
 
     user_parts = [p for p in [prompt, user_input] if p]
     user_text = "\n".join(user_parts).strip()
@@ -91,8 +118,8 @@ def format_battle_for_eval(row: dict[str, Any]) -> str:
             f"=== Expert Judgment: {winner} ==="
         )
 
-    # Preference-pair datasets with chosen/rejected (or accepted/rejected).
-    if ("chosen" in row or "accepted" in row) and "rejected" in row:
+    # Preference-pair datasets: chosen/rejected, UltraFeedback-style fields, etc.
+    if _is_preference_pair_row(row):
         return _format_dpo_row(row)
 
     # Fallback: keep pipeline robust if row schema drifts.
@@ -116,13 +143,13 @@ def sample_examples(
             elif winner in ("tie", "both_bad") and len(failures) < n_failure:
                 failures.append(fmt)
         # Preference-pair rows: chosen/accepted is success, rejected is failure.
-        elif ("chosen" in row or "accepted" in row) and "rejected" in row:
+        elif _is_preference_pair_row(row):
             prompt = str(row.get("prompt", row.get("instruction", ""))).strip()
             user_input = str(row.get("input", "")).strip()
             user_parts = [p for p in [prompt, user_input] if p]
             user_text = "\n".join(user_parts).strip()
-            chosen = str(row.get("chosen", row.get("accepted", ""))).strip()
-            rejected = str(row.get("rejected", "")).strip()
+            chosen = _preference_chosen_text(row)
+            rejected = _preference_rejected_text(row)
             if not user_text and chosen and rejected:
                 good, bad = (
                     f"=== Preferred transcript ===\n{chosen}",

@@ -1,0 +1,65 @@
+{
+  "factual_accuracy": {
+    "description": "The accuracy of the information presented in the response, particularly in relation to factual claims regarding the Mediterranean Sea and the countries bordering it.",
+    "accepted_values": [
+      "0 - Not Accurate",
+      "1 - Partially Accurate",
+      "2 - Mostly Accurate",
+      "3 - Fully Accurate"
+    ]
+  },
+  "instruction_following": {
+    "description": "How well the response adheres to the user\u2019s original instruction and input prompt, maintaining the intended task context.",
+    "accepted_values": [
+      "0 - Did Not Follow Instructions",
+      "1 - Followed Some Instructions",
+      "2 - Mostly Followed Instructions",
+      "3 - Fully Followed Instructions"
+    ]
+  },
+  "scope_and_completeness": {
+    "description": "The extent to which the response covers all necessary aspects of the task, including completeness of the solution and depth of information provided.",
+    "accepted_values": [
+      "0 - Incomplete",
+      "1 - Minimal Coverage",
+      "2 - Good Coverage",
+      "3 - Comprehensive Coverage"
+    ]
+  },
+  "coherent_reasoning": {
+    "description": "The logical flow and clarity of the reasoning presented in the response, including the structure and connection of ideas.",
+    "accepted_values": [
+      "0 - No Coherence",
+      "1 - Poor Coherence",
+      "2 - Some Coherence",
+      "3 - Highly Coherent"
+    ]
+  },
+  "safe_behavior": {
+    "description": "The adherence to safety and ethical guidelines in the response, ensuring no harmful or unsafe advice is given.",
+    "accepted_values": [
+      "0 - Unsafe",
+      "1 - Somewhat Safe",
+      "2 - Mostly Safe",
+      "3 - Completely Safe"
+    ]
+  },
+  "adherence_to_formatting": {
+    "description": "The response's compliance with any specified formatting or constraints as laid out in the user prompt.",
+    "accepted_values": [
+      "0 - Did Not Adhere",
+      "1 - Some Adherence",
+      "2 - Mostly Adhered",
+      "3 - Fully Adhered"
+    ]
+  },
+  "clarity": {
+    "description": "The overall clarity of the response, including the ease of understanding and lack of ambiguity in the language used.",
+    "accepted_values": [
+      "0 - Very Unclear",
+      "1 - Somewhat Unclear",
+      "2 - Mostly Clear",
+      "3 - Very Clear"
+    ]
+  }
+}

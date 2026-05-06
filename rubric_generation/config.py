@@ -18,6 +18,7 @@ SUPPORTED_DATASETS = (
     "Vezora/Code-Preference-Pairs",
     "HumanLLMs/Human-Like-DPO-Dataset",
     "Anthropic/hh-rlhf",
+    "argilla/ultrafeedback-binarized-preferences",
 )
 
 # ── Pipeline hyper-params ──────────────────────────────────────────────────────
@@ -89,6 +90,23 @@ Paper pointer: https://arxiv.org/abs/2501.05032 \
     return name, description
 
 
+def _ultrafeedback_binarized_task() -> tuple[str, str]:
+    name = "UltraFeedback-style instruction-following preference over diverse completions (mean-rated binarization)"
+    description = """\
+You are judging two candidate assistant answers to the same user instruction, drawn from UltraFeedback-derived \
+preference data binarized by Argilla: `chosen_response` vs `rejected_response` pairs where the preference side \
+was picked from multi-aspect human ratings averaged across honesty, instruction-following, truthfulness-style \
+axes (not a single synthetic overall critique score).
+
+Reward answers that better satisfy the instruction: factual accuracy when claims matter, appropriate scope \
+and completeness, coherent reasoning, safe behavior, and faithful adherence to formatting or constraints. Both \
+sides may look fluent; look for substantive gaps, subtle instruction misses, hedging or overreach, and clarity.
+
+Dataset context: https://huggingface.co/datasets/argilla/ultrafeedback-binarized-preferences \
+"""
+    return name, description
+
+
 def _hh_rlhf_task() -> tuple[str, str]:
     name = "Human preference judgments for assistant dialogues (RLHF-style transcripts)"
     description = """\
@@ -112,6 +130,7 @@ _DATASET_TASKS: dict[str, tuple[str, str]] = {
     "Vezora/Code-Preference-Pairs": _code_preference_pairs_task(),
     "HumanLLMs/Human-Like-DPO-Dataset": _human_like_dpo_task(),
     "Anthropic/hh-rlhf": _hh_rlhf_task(),
+    "argilla/ultrafeedback-binarized-preferences": _ultrafeedback_binarized_task(),
 }
 
 
